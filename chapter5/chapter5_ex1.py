@@ -23,12 +23,18 @@ def sanitize(time_string):
 # create new empty list
 clean_james=[]
 
+"""
+# list iteration
 # take each item in the record
 for each_t in james_record:
     clean_james.append(sanitize(each_t))
 
 print(sorted(clean_james))
 #print(sorted(james_record))
+"""
+
+# list comprehension
+print(sorted(sanitize(t) for t in james_record))
 
 """
 with open("james.txt",'r') as james:
